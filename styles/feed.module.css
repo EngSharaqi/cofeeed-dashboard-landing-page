@@ -1,0 +1,45 @@
+.feed ul {
+    display: flex;
+    justify-content: space-between
+}
+.feed ul li {
+    list-style-type: none;
+    padding-left: 0;
+    display: inline-block
+}
+
+.feed ul li h6 { color: var(--inActive) }
+
+/* Card */
+.card, .profile_pic {
+    background-image: url('https://placeholder.photo/img/270x200');
+    border-radius: 10px;
+    border: 1px solid #fff;
+    height: 200px;
+    width: 100%;
+    background-size: cover
+}
+
+.user { display: flex }
+
+.user h6 { display: inline-block }
+
+/* profile pic, name, likes, comments */
+.post_info { justify-content: space-between;
+margin: 1rem 0 0 0 }
+
+.links_comments, .links_comments span, .links_comments span h6 { display: inline-block }
+
+.links_comments h6, .links_comments i { color: var(--inActive) }
+
+/* comments  */
+#comment i {
+    margin-left: 10px;
+    display: inline-block
+}
+
+
+#comment i, #comment h6 {
+    color: var(--inActive)
+}
+

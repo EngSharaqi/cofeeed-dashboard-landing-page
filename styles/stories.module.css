@@ -1,0 +1,14 @@
+.stories {
+    justify-content: space-between;
+    margin: 1rem 0
+}
+.pics {
+    width: 60px;
+    height: 60px;
+    background: #fff;
+    background-image: url('https://placeholder.photo/img/220');
+    border-radius: 50%;
+    background-size: cover;
+    border: 3px solid var(--inActive);
+    position: relative;
+}
