@@ -28,3 +28,77 @@
 .aside ul li:hover a, .aside ul li:hover i, .aside ul li.active a, .aside ul li.active i{
     color: var(--mainColor, #a974ff)
 }
+
+/* Top bar */
+.topbar {
+    display: none;
+    background-color: #fff !important
+}
+
+.topbar .downMenu {
+    border: 1px solid var(--inActive, #aaa);
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.topbar .downMenu span {
+    color: var(--inActive, #aaa) !important;
+    background-image: initial;
+    display: inline-block;
+    width: auto;
+    height: auto
+}
+
+.topbar .downMenu span i {
+    width: auto;
+    height: auto;
+    font-size: 1.5rem
+}
+
+.topbar .aside { margin-top: 1rem }
+
+.form { margin-top: 0 }
+
+.form input {
+    margin-left: .7rem
+}
+
+.form input {
+    border: 1px solid var(--inActive, #aaa);
+    color: var(--mainColor, #222) !important;
+    max-width: 60%;
+    margin-right: 7px
+}
+
+.form input::placeholder { color: var(--inActive) }
+
+.form input:focus {
+    border-color: var(--mainColor, #aaa);
+    outline: 0;
+    box-shadow: 0 0 5px var(--mainColor, transparent);
+}
+
+.form button {
+    border: 1px solid var(--inActive, #aaa) !important;
+    color: var(--mainColor, #222) !important
+}
+
+.form button:hover {
+    color:#fff !important;
+    background-color: var(--mainColor, #222) !important;
+}
+.form button:active, .form button:focus {
+    color:#fff !important;
+    background-color: var(--mainColor, #222) !important;
+    box-shadow: 0 0 5px var(--mainColor) !important;
+}
+
+@media(max-width:767px) {
+    .topbar { display: flex }
+    .asideF { display: none }
+}
+
+@media(min-width: 767px){
+    .rightSectionLinks { display: none !important }
+}

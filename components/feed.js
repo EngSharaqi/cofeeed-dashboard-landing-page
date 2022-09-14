@@ -28,18 +28,18 @@ export default function Feed() {
 
             {/* Post */}
             <div className='row'>
-                <div className='col-xs-12 col-sm-12 col-md-6 col-lg-6'>
+                <div className='col-xs-12 col-sm-6 col-md-12 col-lg-6'>
                     <Post post='' profile_pic='https://placeholder.photo/img/20x20' name='Mohamed Sharaqi' likes='94' comments='24' isLiked='liked' />
                 </div>
 
-                <div className='col-xs-12 col-sm-12 col-md-6 col-lg-6'>
+                <div className='col-xs-12 col-sm-6 col-md-12 col-lg-6'>
                     <Post post='' profile_pic='https://placeholder.photo/img/20x20' name='Abdelhamid Elbasuny' likes='35' comments='20' isLiked = '' />
                 </div>
 
-                <div className='col-xs-12 col-sm-12 col-md-6 col-lg-6'>
+                <div className='col-xs-12 col-sm-6 col-md-12 col-lg-6'>
                     <Post post='' profile_pic='https://placeholder.photo/img/20x20' name='Sayed Ahmed' likes='40' comments='56' isLiked = '' />
                 </div>
-                <div className='col-xs-12 col-sm-12 col-md-6 col-lg-6'>
+                <div className='col-xs-12 col-sm-6 col-md-12 col-lg-6'>
                     <Post post='' profile_pic='https://placeholder.photo/img/20x20' name='Rizk' likes='13' comments='75' isLiked = 'liked' />
                 </div>
             </div>

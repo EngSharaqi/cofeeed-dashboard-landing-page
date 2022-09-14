@@ -1,7 +1,18 @@
 .stories {
     justify-content: space-between;
-    margin: 1rem 0
+    margin: 1rem 0;
+    width: 100%;
+    max-height: 75px;
+    display: flex;
+    /* white-space: nowrap; */
+    overflow: hidden;
+    overflow-x: auto;
+    flex-direction: column;
 }
+.stories div { margin-right: 7px }
+
+.stories div:last-child { margin-right: 0 }
+
 .pics {
     width: 60px;
     height: 60px;
