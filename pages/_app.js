@@ -1,6 +1,7 @@
 import '../styles/globals.css'
 import Aside from '../components/aside'
 import Head from 'next/head'
+import RightSide from '../components/rightSide'
 function MyApp({ Component, pageProps }) {
   return (
     <>
@@ -18,14 +19,14 @@ function MyApp({ Component, pageProps }) {
       </Head>
 
       <div className='row'>
-        <div className='col-md-3 col-lg-2'>
+        <div className='col-md-2 col-lg-2'>
           <Aside />
         </div>
-        <div className='col-md-6 col-lg-7'>
+        <div className='col-md-7 col-lg-7'>
           <Component {...pageProps} />
         </div>
         <div className='col-md-3 col-lg-3'>
-          <h1>Here is something</h1>
+          <RightSide />
         </div>
       </div>
     </>

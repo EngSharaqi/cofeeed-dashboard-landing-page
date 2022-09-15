@@ -1,0 +1,132 @@
+.rightSide {
+    margin-top: 1rem
+}
+
+.actions {
+    justify-content: space-between;
+    align-items: center
+}
+.actions .form { width: calc(99% / 2) }
+.actions .form i, .actions .form input {
+    height: 50px;
+    border: 2px solid var(--inActive);
+    border-radius: 100px;
+    padding: 0 0 0 1rem;
+    border: 2px solid var(--inActive);
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--inActive);
+} 
+
+
+.actions .form input::placeholder { color: var(--inActive) }
+
+.actions .form i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-right: 0;
+    max-width: 35px !important
+}
+
+.actions .form input {
+    max-width: calc(99% - 35px);
+    width: calc(98% - 35px);
+    border-left: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    color: var(--mainColor);
+    margin: 0 !important
+}
+
+.actions .form input:focus{
+    box-shadow: unset
+}
+
+.actions > div {
+    width: 50px;
+    height: 50px;
+    border: 1px solid var(--inActive);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    color: var(--inActive);
+}
+
+.rightSide .notf i, .rightSide .post i { font-size: 1rem }
+
+.rightSide .notf:hover {
+    background-color: var(--mainColor);
+    border-color: var(--mainColor) !important
+}
+
+.rightSide .notf:hover a i {
+    color: #fff;
+    text-decoration: none
+}
+
+.rightSide .post {
+    background-color: #54b1f4;
+    border-color: #54b1f4
+}
+
+.rightSide .post:hover{ background-color: #4590c7 }
+
+.post i { color: #fff }
+
+.txt { 
+    justify-content: space-between;
+    width: 100%;
+    margin: 1.5rem 0 
+}
+
+.txt a { color: var(--mainColor) }
+/* MediaQuery */
+@media(max-width: 767px){
+    .rightSide { display: none !important } 
+}
+
+/* suggestions */
+.suggestionsList { width: 100% }
+.suggestions {
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 1.5rem
+}
+
+.suggestions h6 { margin: 0 0 3px !important; font-size: 14px }
+.suggestions p { margin: 0 !important; color: var(--inActive); font-size: 12px }
+
+.isFollow button {
+    border: 2px solid var(--inActive);
+    border-radius: 7px;
+    background-color: transparent;
+    font-size: 12px;
+    padding: 3px 6px;
+    color: #222;
+    min-width: 65px;
+    font-size: 10px;
+    font-weight: bold
+}
+
+.isFollow button:hover {
+    background-color: var(--mainColor);
+    border-color: var(--mainColor);
+    color: #fff
+}
+
+.suggestions .isFollow button[class='follow'] {
+    border: 2px solid var(--mainColor);
+    background-color: var(--mainColor);
+    color: #fff;
+}
+
+.suggestions .isFollow button[class='follow']:hover {
+    background-color: red;;
+    border-color: red
+}
