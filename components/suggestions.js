@@ -23,7 +23,8 @@ export default function Suggestions (props) {
                     </div>
                 </div>
                 <div className={`${main.isFollow}`}>
-                    <button className = {props.isFollowed}>{ props.isFollowed === 'followed' ? 'Followed' : 'follow' }</button>
+                    {/* <button className = {props.isFollowed}>{ props.isFollowed === 'followed' ? 'Followed' : 'follow' }</button> */}
+                    <button className = {props.className}>{ props.className === 'followed' ? 'Followed' : 'follow' }</button>
                 </div>
             </div>
         </>

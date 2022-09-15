@@ -5,7 +5,8 @@
 .feed ul li {
     list-style-type: none;
     padding-left: 0;
-    display: inline-block
+    display: inline-block;
+    margin-left: 10px
 }
 
 .feed ul li h6 { color: var(--inActive) }
@@ -43,3 +44,25 @@ margin: 1rem 0 0 0 }
     color: var(--inActive)
 }
 
+
+@media(max-width: 370px){
+    .feed h6 { text-align: center }
+    .feed{ display: flex }
+    .feed .controls {
+        width: 100%
+    }
+    .feed ul {
+        padding-left: 0;
+        width: calc(100vw - 60px);
+    }
+
+    .feed ul li {
+        text-align: center;
+        padding-left: 0;
+        margin: .5rem 0
+    }
+}
+
+@media(max-width: 305px){
+    .user h6 { font-size: 12px; margin-top: 3px }
+}

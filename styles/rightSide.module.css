@@ -6,7 +6,7 @@
     justify-content: space-between;
     align-items: center
 }
-.actions .form { width: calc(99% / 2) }
+.actions .form { width: calc((99% - 1rem) / (1.5)) }
 .actions .form i, .actions .form input {
     height: 50px;
     border: 2px solid var(--inActive);
@@ -85,7 +85,8 @@
 }
 
 .txt a { color: var(--mainColor) }
-/* MediaQuery */
+
+
 @media(max-width: 767px){
     .rightSide { display: none !important } 
 }
@@ -120,13 +121,43 @@
     color: #fff
 }
 
-.suggestions .isFollow button[class='follow'] {
+.suggestions .isFollow button[class='followed'] {
     border: 2px solid var(--mainColor);
     background-color: var(--mainColor);
     color: #fff;
 }
 
-.suggestions .isFollow button[class='follow']:hover {
+.suggestions .isFollow button[class='followed']:hover {
     background-color: red;;
     border-color: red
+}
+
+@media(min-width: 767px) and (max-width: 1120px){
+    .actions .form { margin-bottom: .5rem !important }
+    
+    .isFollow { width: 100% }
+
+    .txt { margin: 1.5rem 0 0 }
+
+    .txt h6:last-child {
+        width: 100%;
+        margin: 1rem 0;
+    }
+
+    .isFollow button {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+}
+@media(min-width: 767px) and (max-width: 1175px){
+    .actions .form {
+        width: 100%;
+        margin-bottom: .5rem !important
+    }
+    .actions > div {
+        width: calc((100% - .5rem) / 2) !important;
+        border-radius: 35px !important;
+        border: 2px solid var(--inActive);
+    }
 }

@@ -1,3 +1,10 @@
+.aside, .aside ul, .aside ul li { width: 100% }
+
+.logo {
+    color: var(--mainColor);
+    margin: 1rem .7rem 3rem
+}
+
 .aside { background-color: #fff; margin-top: 1rem }
 
 .aside ul {

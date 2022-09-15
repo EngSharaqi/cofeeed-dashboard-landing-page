@@ -2,6 +2,7 @@ import { Component } from 'react'
 import axios from 'axios'
 import main from '../styles/feed.module.css'
 import Post from './post'
+
 export default class Feed extends Component{
     state = {
         post: []
@@ -10,40 +11,16 @@ export default class Feed extends Component{
     componentDidMount = () => {
         var posts = [];
 
-        axios.get("/api/postAPI")
+        axios.get("/api/postAPI") // I created a small api for this app!
         .then(res => {
             res.data.posts.map(res =>{
-                posts.push(res)
-
-                this.setState({
-                    post: posts,
-                })                
+                posts.push(res);
+                this.setState({ post: posts })                
             })
-        });
-
-        
+        }); 
     }
 
     render() {
-        let handleActions = (e) => {
-            let all = document.getElementById('all')
-            let following = document.getElementById('following')
-            let newest = document.getElementById('newest')
-            let popular = document.getElementById('popular')
-
-            if(e.target.id === 'popular'){
-                
-                this.state.post.map(res => {
-                    
-                })
-            }
-
-            if(e.target.id === 'all'){
-                console.log('all')
-            }
-            
-        }
-        
         return (
             <>
                 {/* Controls */}
@@ -51,12 +28,12 @@ export default class Feed extends Component{
                     <div className='col'>
                         <h6>Feeds</h6>
                     </div>
-                    <div className='col'>
-                        <ul onClick={handleActions}>
-                            <li><h6 id='all'>All</h6></li>
-                            <li><h6 id='following'>Following</h6></li>
-                            <li><h6 id='newest'>Newest</h6></li>
-                            <li><h6 id='popular'>Popular</h6></li>
+                    <div  className={`col ${main.controls}`}>
+                        <ul>
+                            <li><h6>All</h6></li>
+                            <li><h6>Following</h6></li>
+                            <li><h6>Newest</h6></li>
+                            <li><h6>Popular</h6></li>
                         </ul>
                     </div>
                 </div>

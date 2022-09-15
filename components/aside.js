@@ -13,11 +13,11 @@ export default function Aside() {
         <div className={`row ${main.aside} ${main.asideF}`}>
             <div className='col-xs-12'>
                 <div className='row'>
-                    {/* Logo */}
+                    <h2 className={main.logo}>Cofeed</h2>
                 </div>
                 <div className='row'>
-                    <h4>Menu</h4>
-                    <div className='row'>
+                    <h4 style={{'min-width': '100%'}}>Menu</h4>
+                    <div className='row' style={{'width' : '100%'}}>
                         <Links />
                     </div>
                 </div>

@@ -8,7 +8,7 @@ export default function TopBar() {
     return (
         <>
             <nav className={`navbar navbar-expand-lg navbar-light bg-light ${main.topbar}`}>
-                <a className="navbar-brand" href="#">Navbar</a>
+                <a className={`navbar-brand`} href="#" style={{ 'color': 'var(--mainColor)' }}>Cofeed Logo</a>
                 <button className={`navbar-toggler ${main.downMenu}`} type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon">
                         <i class="fas fa-bars"></i>
