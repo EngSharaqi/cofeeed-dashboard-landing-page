@@ -14,10 +14,8 @@ a { color: inherit; text-decoration: none }
     --inActive: #a4b6e1; /* Links not active in side menu */
 }
 
-/* background: #f1f5fe;
-background: -webkit-linear-gradient(to top, #f5af19, #f12711);
-background: linear-gradient(to top, #eff4fc, #f7faff); */
-
 span.liked i, span.liked h6 {
     color: #ff5775
 }
+
+::selection { background-color: var(--mainColor); color: #fff }

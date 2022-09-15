@@ -1,49 +1,71 @@
+import { Component } from 'react'
+import axios from 'axios'
 import main from '../styles/feed.module.css'
 import Post from './post'
-export default function Feed() {
-    return (
-        <>
-            {/* Controls */}
-            <div className={`row ${main.feed}`}>
-                <div className='col'>
-                    <h6>Feeds</h6>
-                </div>
-                <div className='col'>
-                    <ul>
-                        <li>
-                            <h6>All</h6>
-                        </li>
-                        <li>
-                            <h6>Following</h6>
-                        </li>
-                        <li>
-                            <h6>Newest</h6>
-                        </li>
-                        <li>
-                            <h6>Popular</h6>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+export default class Feed extends Component{
+    state = {
+        post: []
+    }
+    
+    componentDidMount = () => {
+        var posts = [];
 
-            {/* Post */}
-            <div className='row'>
-                <div className='col-xs-12 col-sm-6 col-md-12 col-lg-6'>
-                    <Post post='' profile_pic='https://placeholder.photo/img/20x20' name='Mohamed Sharaqi' likes='94' comments='24' isLiked='liked' />
+        axios.get("/api/postAPI")
+        .then(res => {
+            res.data.posts.map(res =>{
+                posts.push(res)
+
+                this.setState({
+                    post: posts,
+                })                
+            })
+        });
+
+        
+    }
+
+    render() {
+        let handleActions = (e) => {
+            let all = document.getElementById('all')
+            let following = document.getElementById('following')
+            let newest = document.getElementById('newest')
+            let popular = document.getElementById('popular')
+
+            if(e.target.id === 'popular'){
+                
+                this.state.post.map(res => {
+                    
+                })
+            }
+
+            if(e.target.id === 'all'){
+                console.log('all')
+            }
+            
+        }
+        
+        return (
+            <>
+                {/* Controls */}
+                <div className={`row ${main.feed}`}>
+                    <div className='col'>
+                        <h6>Feeds</h6>
+                    </div>
+                    <div className='col'>
+                        <ul onClick={handleActions}>
+                            <li><h6 id='all'>All</h6></li>
+                            <li><h6 id='following'>Following</h6></li>
+                            <li><h6 id='newest'>Newest</h6></li>
+                            <li><h6 id='popular'>Popular</h6></li>
+                        </ul>
+                    </div>
                 </div>
 
-                <div className='col-xs-12 col-sm-6 col-md-12 col-lg-6'>
-                    <Post post='' profile_pic='https://placeholder.photo/img/20x20' name='Abdelhamid Elbasuny' likes='35' comments='20' isLiked = '' />
+                {/* Post */}
+                <div className='row'>
+                    {this.state.post.map(res => <div className='col-xs-12 col-sm-6 col-md-12 col-lg-6'><Post post={res.post_img} profile_pic='https://placeholder.photo/img/20x20' name={res.name} likes={res.likes} comments={res.comments} isLiked='liked' id={res.id} /></div>)}
                 </div>
-
-                <div className='col-xs-12 col-sm-6 col-md-12 col-lg-6'>
-                    <Post post='' profile_pic='https://placeholder.photo/img/20x20' name='Sayed Ahmed' likes='40' comments='56' isLiked = '' />
-                </div>
-                <div className='col-xs-12 col-sm-6 col-md-12 col-lg-6'>
-                    <Post post='' profile_pic='https://placeholder.photo/img/20x20' name='Rizk' likes='13' comments='75' isLiked = 'liked' />
-                </div>
-            </div>
-
-        </>
-    )
+            </>
+        )
+    }
 }
